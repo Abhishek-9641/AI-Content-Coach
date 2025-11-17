@@ -1,9 +1,5 @@
 # AI-Content-Coach
 
-Here’s a structured **README.md** draft based on the three notebooks you shared. I’ll structure it so that anyone cloning your repo can quickly understand what each notebook does, what dependencies are required, and how the workflow progresses.
-
----
-
 # 📘 Project README
 
 ## 🚀 Overview
