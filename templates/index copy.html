@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Coach</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1><span>AI</span><br>Content<br>Coach</h1>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Chat Section -->
+            <section class="chat-section">
+                <h2>Chat</h2>
+                <div id="chat-box" class="chat-box"></div>
+                <div class="chat-input-row">
+                    <input type="text" id="user-input" placeholder="Type your message..." />
+                    <button id="send-btn" title="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+                    <button id="mic-btn" title="Voice input"><i class="fa-solid fa-microphone"></i></button>
+                    <button id="clear-chat-btn" title="Clear chat"><i class="fa-solid fa-broom"></i></button>
+                </div>
+
+                <!-- chat exporter section -->
+                <div class="chat-export">
+                    <button id="export-chat-btn">
+                        <i class="fa-solid fa-file-export"></i> Export Chat
+                    </button>
+                </div>
+
+                <!-- Text to Speech -->
+                <div class="chat-tts">
+                    <button id="tts-chat-btn">
+                        <i class="fa-solid fa-volume-high"></i> Read Chat Aloud
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- Tools Section -->
+            <section class="tools-section">
+                <!-- Ingestion Tools -->
+                 <div class="card ingest-section">
+                    <h2>Content Ingestion</h2>
+                    
+                    <!-- URL ingestion -->
+                    <input type="text" id="url-input" placeholder="Paste URL" />
+                    <button id="ingest-url"><i class="fa-solid fa-globe"></i> Ingest URL</button>
+
+                    <!-- PDF ingestion -->
+                    <input type="file" id="pdf-upload" accept=".pdf" />
+                    <button id="ingest-pdf"><i class="fa-solid fa-file-pdf"></i> Ingest PDF</button>
+
+                    <!-- Clear ingested data -->
+                    <button id="clear-ingested"><i class="fa-solid fa-trash-can"></i> Clear Ingested Data</button>
+                </div>
+
+                <!-- Feedback section -->
+                <div class="ingest-feedback">
+                    <!-- Only shows status: ✅ PDF successfully ingested! -->
+                    <p id="ingest-status" class="status-message"></p>
+
+                    <!-- Only shows the summary snippet -->
+                    <pre id="ingest-summary" class="summary-snippet"></pre> 
+                </div>
+                
+
+
+                 <!-- WORKING!!! -->
+                <!-- <div class="card ingest-section">
+                    <h2>Content Ingestion</h2>
+                    <input type="text" id="url-input" placeholder="Paste URL" />
+                    <button id="ingest-url"><i class="fa-solid fa-globe"></i> Ingest URL</button>
+
+                    <input type="file" id="pdf-upload" accept=".pdf" />
+                    <button id="ingest-pdf"><i class="fa-solid fa-file-pdf"></i> Ingest PDF</button>
+
+                    <button id="clear-ingested"><i class="fa-solid fa-trash-can"></i> Clear Ingested Data</button>
+                </div>
+                
+
+                <div class="ingest-feedback">
+                    <p id="ingest-status"></p>
+                    <pre id="ingest-preview"></pre>
+                </div> -->
+
+
+                <!-- Content Growth Tools -->
+                <div class="card content-growth-section">
+                    <h2>Content Growth Analysis</h2>
+                    <input type="file" id="media-upload" accept="image/*" />
+                    <textarea id="metrics" placeholder='Optional metrics JSON, e.g. {"likes":100,"shares":5}'></textarea>
+                    <button id="analyze-btn"><i class="fa-solid fa-chart-line"></i> Analyze Post</button>
+                    <div id="analysis-result"></div>
+                </div>
+
+                <!-- <div class="card content-growth-section">
+                    <h2>Content Growth Analysis</h2>
+                    <input type="text" id="post-url" placeholder="Paste URL of a Social Media Post" />
+                    <textarea id="caption" placeholder="Paste caption/text"></textarea>
+                    <input type="file" id="media-upload" />
+                    <textarea id="metrics" placeholder='metrics JSON, e.g. {"likes":100,"shares":5}'></textarea>
+                    <button id="analyze-btn"><i class="fa-solid fa-chart-line"></i> Analyze Post</button>
+                    <div id="analysis-result"></div>
+                </div> -->
+            </section>
+        </main>
+    </div>
+</body>
+</html>
